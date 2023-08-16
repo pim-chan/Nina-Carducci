@@ -1,0 +1,76 @@
+{
+    "slider":  [
+            {
+            "id": "1",
+            "title": "Ryoji Iwata",
+            "image": "./assets/images/slider/ryoji-iwata.webp" 
+        },
+        {
+            "id": "2",
+            "title": "Nicholas Green",
+            "image": "./assets/images/slider/nicholas-green.webp" 
+        },
+        {
+            "id": "3",
+            "title": "Edward Cisneros",
+            "image": "./assets/images/slider/edward-cisneros.webp"
+        }
+    ], 
+
+    "gallery" : [ 
+        {
+            "id": "4",
+            "title": "Aaron paul",
+            "image": "./assets/images/gallery/concerts/aaron-paul.webp", 
+            "category" : "Concert"
+        },
+        {
+            "id": "5",
+            "title": "Jason Goodman",
+            "image": "./assets/images/gallery/entreprise/jason-goodman.webp", 
+            "category" : "Entreprise"
+        },
+        {
+            "id": "6",
+            "title": "Ali Morshedlou",
+            "image": "./assets/images/gallery/entreprise/ali-morshedlou.webp", 
+            "category" : "Entreprise"
+        },
+        {
+            "id": "7",
+            "title": "Hannah Busing",
+            "image": "./assets/images/gallery/mariage/hannah-busing.webp", 
+            "category" : "Mariage"
+        },
+        {
+            "id": "8",
+            "title": "Ade Tunji",
+            "image": "./assets/images/gallery/portraits/ade-tunji.webp", 
+            "category" : "Concert"
+        },
+        {
+            "id": "9",
+            "title": "Jakob Owens",
+            "image": "./assets/images/gallery/mariage/jakob-owens.webp", 
+            "category" : "Mariage"
+        },
+        {
+            "id": "10",
+            "title": "Van Prattenburg",
+            "image": "./assets/images/gallery/portraits/van-prattenburg.webp", 
+            "category" : "Concert"
+        },
+        {
+            "id": "11",
+            "title": "Austin Neill",
+            "image": "./assets/images/gallery/concerts/austin-neill.webp", 
+            "category" : "Concert"
+        },
+        {
+            "id": "12",
+            "title": "Mateus Campos Felipe",
+            "image": "./assets/images/gallery/entreprise/mateus-campos-felipe", 
+            "category" : "Entreprise"
+        }
+    ]
+}
