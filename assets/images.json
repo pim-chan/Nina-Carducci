@@ -46,7 +46,7 @@
             "id": "8",
             "title": "Ade Tunji",
             "image": "./assets/images/gallery/portraits/ade-tunji.webp", 
-            "category" : "Concert"
+            "category" : "Portrait"
         },
         {
             "id": "9",
@@ -58,7 +58,7 @@
             "id": "10",
             "title": "Van Prattenburg",
             "image": "./assets/images/gallery/portraits/van-prattenburg.webp", 
-            "category" : "Concert"
+            "category" : "Portrait"
         },
         {
             "id": "11",
@@ -69,7 +69,7 @@
         {
             "id": "12",
             "title": "Mateus Campos Felipe",
-            "image": "./assets/images/gallery/entreprise/mateus-campos-felipe", 
+            "image": "./assets/images/gallery/entreprise/mateus-campos-felipe.webp", 
             "category" : "Entreprise"
         }
     ]

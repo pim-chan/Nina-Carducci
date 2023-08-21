@@ -69,6 +69,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
 indicatorCreation()
 
-// MODAL
 
 
