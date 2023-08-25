@@ -20,6 +20,7 @@ const getProjects = (data) => {
     
     const imgElement = document.createElement('img');
     imgElement.src = element.image;
+    imgElement.alt =`photo de ${element.title}`;
     imgElement.classList.add("projet-img");
     imgElement.addEventListener('click', () => {
       openLightBox(element.image);
@@ -73,31 +74,36 @@ const categorySelection = (selectedCategory) => {
 galleryImagesData();
 
 // LIGHTBOX
-const lightboxOverlay = document.querySelector('.lightbox-overlay');
+const lightbox= document.querySelector('.lightbox');
+const lightboxOverlay= document.querySelector('.lightbox-overlay');
 const lightboxImg = document.querySelector('.lightbox-img');
 const prevArrow = document.querySelector('.arrow-prev');
 const nextArrow = document.querySelector('.arrow-next');
 
 const openLightBox = (imageUrl) => {
   lightboxImg.src = imageUrl;
-  lightboxOverlay.classList.add('lightbox-open');
+  lightbox.classList.add('lightbox-open');
 }
 
 let currentImageIndex = 0;
 
 const navigateLightbox = (direction) => {
-  const filteredImages = data.gallery.filter(element => element.category === category);
+    fetch('./assets/images.json')
+      .then(res => res.json())
+      .then(data => {
+ 
+  const lightboxImages = data.gallery.filter(element => element.image);
   
   currentImageIndex += direction;
   
   if (currentImageIndex < 0) {
-    currentImageIndex = filteredImages.length - 1;
-  } else if (currentImageIndex >= filteredImages.length) {
+    currentImageIndex = lightboxImages.length - 1;
+  } else if (currentImageIndex >= lightboxImages.length) {
     currentImageIndex = 0;
   }
   
-  lightboxImg.src = filteredImages[currentImageIndex].image;
-};
+  lightboxImg.src = lightboxImages[currentImageIndex].image;
+})};
 
 prevArrow.addEventListener('click', () => {
   navigateLightbox(-1);
@@ -107,13 +113,15 @@ nextArrow.addEventListener('click', () => {
   navigateLightbox(1);
 });
 
-lightboxOverlay.addEventListener('click', () => {
+const closeLightbox = () => {
+  lightboxOverlay.addEventListener('click', () => {
+    lightbox.classList.remove('lightbox-open');
+})};
+
+lightbox.addEventListener('click', () => {
   closeLightbox();
 });
 
-const closeLightbox = () => {
-  lightboxOverlay.classList.remove('lightbox-open');
-};
 
 
 

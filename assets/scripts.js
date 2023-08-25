@@ -12,7 +12,10 @@ const indicatorCreation = () => {
         const navigatorContainer = document.querySelector(".indicators-container")
         const navigatorElement = document.createElement('button');
         navigatorElement.classList.add('indicator')
-        if(index === 0){navigatorElement.classList.add('indicator-selected');}
+        navigatorElement.dataset.slideIndex = index;
+        if(index === 0){
+          navigatorElement.classList.add('indicator-selected');
+        }
         navigatorContainer.appendChild(navigatorElement);
     });
   })
@@ -22,10 +25,14 @@ const indicatorCreation = () => {
 }
 
 const indicatorSelection = (indicatorIndex) => {
-  Array.from(document.querySelectorAll('.indicator')).forEach((element,index) => {
-      element.classList.remove('indicator-selected');
-      if(index === indicatorIndex){element.classList.add('indicator-selected');
-    }
+  Array.from(document.querySelectorAll('.indicator')).forEach((button,index) => {
+    // button.addEventListener("click", () => {
+
+    // })
+      button.classList.remove('indicator-selected');
+      if(index === indicatorIndex){
+        button.classList.add('indicator-selected');
+      }
   });
 }
 
@@ -34,7 +41,6 @@ const slide = (direction) => {
     .then(response => response.json())
     .then(imagesData => {
         const slidesImages = imagesData.slider;
-        console.log(slidesImages);
         currentSlide = currentSlide + direction;
 
         if(currentSlide === -1){
@@ -43,7 +49,11 @@ const slide = (direction) => {
             currentSlide = 0;
         }
         
-        document.querySelector('.slide__img').setAttribute('src', slidesImages[currentSlide].image);
+        const slideImage = document.querySelector('.slide__img');
+        slideImage.setAttribute('src', slidesImages[currentSlide].image);
+        slideImage.setAttribute('alt', "photo de " + slidesImages[currentSlide].title);
+        // slideImage.style.transform = 'translateX(-' + currentSlide * 100 + '%)';
+        // slideImage.classList.add('slide-transition');
 
         indicatorSelection(currentSlide);
   })
@@ -57,6 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   svgButtons.forEach(button => {
       button.addEventListener("click", () => {
+        // clearInterval(autoSlideInterval);
           const action = button.getAttribute("data-action");
           if (action === "prev") {
               slide(-1);
@@ -65,9 +76,20 @@ document.addEventListener("DOMContentLoaded", () => {
           }
       });
   });
-})
 
-indicatorCreation()
+  // setInterval(() => {
+  //   slide(1); 
+  // }, 4000); 
+
+  indicatorCreation();
+});
+
+
+
+
+
+
+
 
 
 
