@@ -8,13 +8,35 @@ const galleryImagesData = () => {
 }
 
 // Afficher les projets dans la galerie
+// const getProjects = (data) => {
+//   const dataGalleryImages = data.gallery;
+//   const gallery = document.querySelector(".gallery");
+//   gallery.innerHTML = "";
+  
+//   dataGalleryImages.forEach((element) => {
+//     const projet = document.createElement('figure');
+//     projet.classList.add('gallery-projet');
+//     projet.setAttribute('data-project-id', element.id);
+    
+//     const imgElement = document.createElement('img');
+//     imgElement.src = element.image;
+//     imgElement.alt =`photo de ${element.title}`;
+//     imgElement.classList.add("projet-img");
+//     imgElement.addEventListener('click', () => {
+//       openLightBox(element.image);
+//     });
+//     projet.appendChild(imgElement);
+//     gallery.appendChild(projet);
+//   });
+// }
+
 const getProjects = (data) => {
   const dataGalleryImages = data.gallery;
   const gallery = document.querySelector(".gallery");
   gallery.innerHTML = "";
   
   dataGalleryImages.forEach((element) => {
-    const projet = document.createElement('figure');
+    const projet = document.createElement('picture');
     projet.classList.add('gallery-projet');
     projet.setAttribute('data-project-id', element.id);
     
@@ -76,12 +98,12 @@ galleryImagesData();
 // LIGHTBOX
 const lightbox= document.querySelector('.lightbox');
 const lightboxOverlay= document.querySelector('.lightbox-overlay');
-const lightboxImg = document.querySelector('.lightbox-img');
+const currentLightboxImage = document.querySelector('.lightbox-img');
 const prevArrow = document.querySelector('.arrow-prev');
 const nextArrow = document.querySelector('.arrow-next');
 
 const openLightBox = (imageUrl) => {
-  lightboxImg.src = imageUrl;
+  currentLightboxImage.src = imageUrl;
   lightbox.classList.add('lightbox-open');
 }
 
@@ -102,7 +124,7 @@ const navigateLightbox = (direction) => {
     currentImageIndex = 0;
   }
   
-  lightboxImg.src = lightboxImages[currentImageIndex].image;
+  currentLightboxImage.src = lightboxImages[currentImageIndex].image;
 })};
 
 prevArrow.addEventListener('click', () => {
@@ -114,7 +136,7 @@ nextArrow.addEventListener('click', () => {
 });
 
 const closeLightbox = () => {
-  lightboxOverlay.addEventListener('click', () => {
+    lightboxOverlay.addEventListener('click', () => {
     lightbox.classList.remove('lightbox-open');
 })};
 

@@ -11,7 +11,7 @@
 <body>
 	<header>
 		<h1 class="name">Nina Carducci</h1>
-		<div class="nav">   
+		<nav class="nav">   
 			<ul>
 				<li><a href="#about">À propos</a></li>
 				<li><a href="#portfolio">Galerie</a></li>
@@ -19,98 +19,100 @@
 				<li><a href="#contact">Contact</a></li>
 				<li><a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr" target="_blank" aria-label="Discover more of my projects on Instagram"><img src="assets/images/instagram.png" alt=""></a></li>
 			</ul>
-		</div>
+		</nav>
 	</header>
-	<div class="carousel">
-		<div class="carousel-inner">
-			<div class="slides">
-				<img src="./assets/images/slider/ryoji-iwata.webp" class="slide__img" alt="photo Ryoji Iwata">
+	<main>
+		<section class="carousel">
+			<div class="carousel-inner">
+				<div class="slides">
+					<img src="./assets/images/slider/ryoji-iwata.webp" class="slide__img" alt="photo Ryoji Iwata">
+				</div>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="#fff" class="arrow-btn prev-btn" data-action="prev"><path d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/></svg>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="#fff" class="arrow-btn next-btn" data-action="next"><path d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/></svg>
+				<div class="indicators-container"></div>
 			</div>
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="#fff" class="prev-btn" data-action="prev"><path d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/></svg>
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="#fff" class="next-btn" data-action="next"><path d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/></svg>
-			<div class="indicators-container"></div>
-		</div>
-	</div>
-	<div id="about">
-		<div class="picture left">
-			<img src="./assets/images/nina.webp" alt="photo de Nina Carducci">
-		</div>
-		<div id="about-me">
-			<h2 class="about-me__title">A propos de moi</h2>
-			<h3 class="about-me__introduction">Devenir photographe était pour moi une évidence. Comme si j’y étais prédestiné. Saisir un moment, une émotion, une situation, un endroit, une lumière et les rendre immortels, voilà ce qui me fait vibrer.</h3>
-			<p>Nous passons notre vie à chercher le bonheur, et lorsque nous y touchons, nous n’avons qu’une envie : le figer au travers de photographies pour le savourer avec les personnes qui sont importantes à nos yeux, ou le partager au plus grand nombre.
-				C’est ce que je vous propose : saisir ces merveilleux moments au travers de mon regard, mon approche, ma technique. Rendre ces moments immortels, afin que vous puissiez y puiser de l’amour, du bonheur, de la tendresse et de lumière à chaque fois que vous poserez les yeux sur vos photos.</p>
-		</div>
-	</div>
-	<div id="portfolio">
-		<h2 class="title">Portfolio</h2>
-		<div class="container py-3">
-			<div class="nav-links-container"></div>
-			<div class="gallery">
+		</section>
+		<article id="about">
+			<div class="picture left">
+				<img src="./assets/images/nina.webp" alt="photo de Nina Carducci">
 			</div>
-			<div class="lightbox">
-				<div class="lightbox-overlay"></div>
-				<div class="lightbox-content">
-					<div class="arrow arrow-prev"><</div>
-					<img class="lightbox-img" src="" alt="">
-					<div class="arrow arrow-next">></div>
+			<section id="about-me">
+				<h2 class="about-me__title">A propos de moi</h2>
+				<h3 class="about-me__introduction">Devenir photographe était pour moi une évidence. Comme si j’y étais prédestiné. Saisir un moment, une émotion, une situation, un endroit, une lumière et les rendre immortels, voilà ce qui me fait vibrer.</h3>
+				<p>Nous passons notre vie à chercher le bonheur, et lorsque nous y touchons, nous n’avons qu’une envie : le figer au travers de photographies pour le savourer avec les personnes qui sont importantes à nos yeux, ou le partager au plus grand nombre.
+					C’est ce que je vous propose : saisir ces merveilleux moments au travers de mon regard, mon approche, ma technique. Rendre ces moments immortels, afin que vous puissiez y puiser de l’amour, du bonheur, de la tendresse et de lumière à chaque fois que vous poserez les yeux sur vos photos.</p>
+			</section>
+		</article>
+		<article id="portfolio">
+			<h2 class="title">Portfolio</h2>
+			<div class="container py-3">
+				<div class="nav-links-container"></div>
+				<div class="gallery">
+				</div>
+				<div class="lightbox">
+					<div class="lightbox-overlay"></div>
+					<div class="lightbox-content">
+						<div class="arrow arrow-prev"><</div>
+						<img class="lightbox-img" src="" alt="">
+						<div class="arrow arrow-next">></div>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="quote">
+			<section class="quote">
+				<figure>
+					<blockquote>
+						<h1 class="quote__text">Un portrait n’est pas une ressemblance. Dès lors qu’une émotion ou qu’un fait est traduit en photo, il cesse d’être un fait pour devenir une opinion. L’inexactitude n’existe pas en photographie. Toutes les photos sont exactes. Aucune d’elles n’est la vérité.</h1>
+					</blockquote>
+					<figcaption class="quote__author">- Richard Avedon</figcaption>
+				</figure>
+			</section>
+		</article>
+		<article id="services">
+			<h2 class="title">Mes services</h2>
+			<div class="container">
+				<section class="service">
+					<div class="service__description">
+						<h3>Shooting photo</h3>
+						<p>Pour capturer vos moments les plus précieux et garder un souvenir impérissable. Je me déplace en Île-de-France pour réaliser vos photos</p>
+					</div>
+					<div class="service__price">
+						<h4>350€/demi journée</h4>
+						<span>Matériel, déplacement inclus</span>
+					</div>
+
+				</section>
+				<section class="service">
+					<div class="service__description">
+						<h3>Retouches</h3>
+						<p>Vous souhaitez retoucher vos photos pour un résultat professionnel ? Bénéficier d’un rendu optimal pour vos publications</p>
+					</div>
+					<div class="service__price">
+						<h4>50€/photo</h4>
+						<span>2 AR par photo</span>
+					</div>
+				</section>
+				<section class="service">
+					<div class="service__description">
+						<h3>Album photos</h3>
+						<p>Partagez avec vos proches et vos clients les photos des moments partagés ensemble à travers un album photo personnalisé</p>
+					</div>
+					<div class="service__price">
+						<h4>400€ album A4</h4>
+						<span>30 pages recto/verso</span>
+					</div>
+				</section>
+			</div>
+		</article>
+		<section class="quote">
 			<figure>
 				<blockquote>
-					<h1 class="quote__text">Un portrait n’est pas une ressemblance. Dès lors qu’une émotion ou qu’un fait est traduit en photo, il cesse d’être un fait pour devenir une opinion. L’inexactitude n’existe pas en photographie. Toutes les photos sont exactes. Aucune d’elles n’est la vérité.</h1>
+					<h1 class="quote__text">De manière inconsciente, je crois, je guette un regard, une expression, des traits ou une nostalgie capable de résumer ou plus exactement de révéler une vie</h1>
 				</blockquote>
 				<figcaption class="quote__author">- Richard Avedon</figcaption>
 			</figure>
-		</div>
-	</div>
-	<div id="services">
-		<h2 class="title">Mes services</h2>
-		<div class="container">
-			<div class="service">
-				<div class="service__description">
-					<h3>Shooting photo</h3>
-					<p>Pour capturer vos moments les plus précieux et garder un souvenir impérissable. Je me déplace en Île-de-France pour réaliser vos photos</p>
-				</div>
-				<div class="service__price">
-					<h4>350€/demi journée</h4>
-					<span>Matériel, déplacement inclus</span>
-				</div>
-
-			</div>
-			<div class="service">
-				<div class="service__description">
-					<h3>Retouches</h3>
-					<p>Vous souhaitez retoucher vos photos pour un résultat professionnel ? Bénéficier d’un rendu optimal pour vos publications</p>
-				</div>
-				<div class="service__price">
-					<h4>50€/photo</h4>
-					<span>2 AR par photo</span>
-				</div>
-			</div>
-			<div class="service">
-				<div class="service__description">
-					<h3>Album photos</h3>
-					<p>Partagez avec vos proches et vos clients les photos des moments partagés ensemble à travers un album photo personnalisé</p>
-				</div>
-				<div class="service__price">
-					<h4>400€ album A4</h4>
-					<span>30 pages recto/verso</span>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="quote">
-		<figure>
-			<blockquote>
-				<h1 class="quote__text">De manière inconsciente, je crois, je guette un regard, une expression, des traits ou une nostalgie capable de résumer ou plus exactement de révéler une vie</h1>
-			</blockquote>
-			<figcaption class="quote__author">- Richard Avedon</figcaption>
-		</figure>
-	</div>
-	<div id="contact">
+		</section>
+	</main>
+	<footer id="contact">
 		<div class="container">
 			<div class="form-container">
 				<h2>Une question ? Une demande de devis ?</h2>
@@ -129,7 +131,7 @@
 				<img src="./assets/images/camera.webp" alt="photo d'un appareil photo">
 			</div>
 		</div>
-	</div>
+	</footer>
 
 	<script src="./assets/maugallery.js"></script>
 	<script src="./assets/scripts.js"></script>
