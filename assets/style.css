@@ -403,7 +403,6 @@ blockquote {
 }
 .form-container {
 	flex : 2;
-
 }
 form {
 	display: flex;
@@ -434,19 +433,113 @@ input[type="submit"] {
 	padding: .5em 1em
 }
 
-@media all and (max-width: 1180px) {
-	.picture {
-		flex : 2;
+.service__description h3 {
+	margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+	font-size: 1.75rem;
+  }
+  .service__description p {
+	  line-height: 1.5;
+  }
+
+  .service__price h4 {
+	  margin-top: 0;
+	  margin-bottom: 0.5rem;
+	  font-weight: 500;
+	  line-height: 1.2;
+	font-size: 1.5rem;
+}
+.form-container h2 {
+	font-size: 1.75rem;
+	  margin-top: 0;
+	  margin-bottom: 0.5rem;
+	  font-weight: 500;
 	}
-	#about, #contact .container {
+	.lightbox {
+		display: none;
+	}
+	
+	.lightbox-overlay {
+		padding-top: 30px;
+		position: absolute; 
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 3;
+		background: rgba(0, 0, 0, 0.45);
+	}
+	.lightbox-content {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		max-width: 500px;
+		z-index: 5;
+	}
+.lightbox-img {
+	max-width: 100%;
+	border: 15px solid white;
+	border-radius: 3px;
+}
+.arrow {
+	position: absolute;
+	top: 50%;
+	font-size: 24px;
+	background-color: white ;
+	transform: translate(-50%, -50%)
+}
+.arrow-next {
+	right: -15px
+}
+
+.lightbox-open {
+	display: block;
+}
+
+@media all and (max-width: 650px) {
+	header {
+		flex-direction: column;
+		padding-inline: 0;
+	}
+	header .nav, header .nav ul {
+		width: 100%;
+		padding: 0 0 0 0;
+	}
+	header .nav li {
+		flex: 1;
+		padding-block: 1em;
+		text-align: center;
+	}
+	.gallery {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 20px;
+	}
+	.gallery-projet {
+		margin: 0 auto;
+	}
+	.picture.left::before, .picture.right::before {
+		height: 150px;
+	}
+	#services .container {
 		align-items: center;
 	}
-	.about-me__title {
-		margin-top: 0;
-		margin-bottom: 1em;
+	.service {
+		max-width: 90%;
 	}
-	#about-me h6, #about-me p {
+	#about, #contact {
+		padding-inline: 2em;
+		padding-block: 2em;
+	}
+	form {
 		width: 100%;
+	}
+	.picture {
+		width: 80%;
 	}
 }
 
@@ -509,117 +602,18 @@ input[type="submit"] {
 	}
 }
 
-@media all and (max-width: 650px) {
-	header {
-		flex-direction: column;
-		padding-inline: 0;
+@media all and (max-width: 1180px) {
+	.picture {
+		flex : 2;
 	}
-	header .nav, header .nav ul {
-		width: 100%;
-		padding: 0 0 0 0;
-	}
-	header .nav li {
-		flex: 1;
-		padding-block: 1em;
-		text-align: center;
-	}
-	.picture.left::before, .picture.right::before {
-		height: 150px;
-	}
-	#services .container {
+	#about, #contact .container {
 		align-items: center;
 	}
-	.service {
-		max-width: 90%;
+	.about-me__title {
+		margin-top: 0;
+		margin-bottom: 1em;
 	}
-	#about, #contact {
-		padding-inline: 2em;
-		padding-block: 2em;
-	}
-	form {
+	#about-me h6, #about-me p {
 		width: 100%;
-	}
-	.picture {
-		width: 80%;
 	}
 }
-  .service__description h3 {
-	margin-top: 0;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-    line-height: 1.2;
-	font-size: 1.75rem;
-  }
-  .service__description p {
-	line-height: 1.5;
-  }
-
-  .service__price h4 {
-	margin-top: 0;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-    line-height: 1.2;
-	font-size: 1.5rem;
-  }
-  .form-container h2 {
-	font-size: 1.75rem;
-	margin-top: 0;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-  }
-  .lightbox {
-	display: none;
-  }
-  
-  .lightbox-overlay {
-	padding-top: 30px;
-	position: absolute; 
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 3;
-	background: rgba(0, 0, 0, 0.45);
-  }
-  .lightbox-content {
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	max-width: 500px;
-	z-index: 5;
-  }
-  .lightbox-img {
-	max-width: 100%;
-	border: 15px solid white;
-	border-radius: 3px;
-  }
-  .arrow {
-	position: absolute;
-	top: 50%;
-	font-size: 24px;
-	background-color: white ;
-	transform: translate(-50%, -50%)
-  }
-  .arrow-next {
-	right: -15px
-  }
-
-  .lightbox-open {
-	display: block;
-  }
-
-/*SMARTPHONE*/
-@media (max-width: 767.98px) {
-	.gallery {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 20px;
-	}
-	.gallery-projet {
-		height: 100%;
-		width: 90%;
-		margin: 0 auto;
-	}
-  }

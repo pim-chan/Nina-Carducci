@@ -25,7 +25,10 @@
 		<section class="carousel">
 			<div class="carousel-inner">
 				<div class="slides">
-					<img src="./assets/images/slider/ryoji-iwata.webp" class="slide__img" alt="photo Ryoji Iwata">
+					<picture class="slide">
+						<source class="slide__source" srcset="./assets/images/slider/ryoji-iwata(small).webp" media="(max-width: 767px)">
+						<img src="./assets/images/slider/ryoji-iwata.webp" class="slide__img" alt="photo Ryoji Iwata">
+					</picture>
 				</div>
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="#fff" class="arrow-btn prev-btn" data-action="prev"><path d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/></svg>
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="#fff" class="arrow-btn next-btn" data-action="next"><path d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/></svg>
@@ -33,9 +36,10 @@
 			</div>
 		</section>
 		<article id="about">
-			<div class="picture left">
-				<img src="./assets/images/nina.webp" alt="photo de Nina Carducci">
-			</div>
+			<picture class="picture left">
+				<source srcset="./assets/images/nina(small).webp" media="(max-width: 767px)">
+				<img src="./assets/images/nina.webp" alt="Photo de Nina Carducci">
+			</picture>
 			<section id="about-me">
 				<h2 class="about-me__title">A propos de moi</h2>
 				<h3 class="about-me__introduction">Devenir photographe était pour moi une évidence. Comme si j’y étais prédestiné. Saisir un moment, une émotion, une situation, un endroit, une lumière et les rendre immortels, voilà ce qui me fait vibrer.</h3>
@@ -127,9 +131,10 @@
 					<input type="submit" value="Envoyer"/>
 				</form>
 			</div>
-			<div class="picture right">
-				<img src="./assets/images/camera.webp" alt="photo d'un appareil photo">
-			</div>
+			<picture class="picture right">
+				<source srcset="./assets/images/camera(small).webp" media="(max-width: 767px)">
+				<img src="./assets/images/camera.webp" alt="Photo de Nina Carducci">
+			</picture>
 		</div>
 	</footer>
 

@@ -2,9 +2,9 @@
 let currentSlide = 0;
 let nbSlides;
 
-const apiDataImage = async () => {
-  let data = '';
-  const apiRest = await fetch('./assets/images.json')
+const DataSlideImages = async () => {
+  let data;
+  const response = await fetch('./assets/images.json')
   .then(response => response.json())
   .then(imagesData => {
     data = imagesData.slider;
@@ -15,6 +15,7 @@ const apiDataImage = async () => {
 
   return data;
 }
+
 
 const indicatorCreation = () => {
     fetch('./assets/images.json')
@@ -27,6 +28,7 @@ const indicatorCreation = () => {
         const navigatorElement = document.createElement('button');
         navigatorElement.classList.add('indicator')
         navigatorElement.dataset.slideIndex = index;
+        navigatorElement.textContent = `Slide ${index + 1}`;
         if(index === 0){
           navigatorElement.classList.add('indicator-selected');
         }
@@ -39,7 +41,7 @@ const indicatorCreation = () => {
 }
 
 const indicatorSelection = (indicatorIndex) => {
-  const slidesImages = apiDataImage();
+
   const indicators = document.querySelectorAll('.indicator');
   Array.from(document.querySelectorAll('.indicator')).forEach((button,index) => {
       button.classList.remove('indicator-selected');
@@ -47,28 +49,29 @@ const indicatorSelection = (indicatorIndex) => {
         button.classList.add('indicator-selected');
       }
   });
-  /* On parcours l'ensemble des indicator */
-  indicators.forEach((button, index) => {
-      /* On ecoute l'ensemble des  au click */
-    button.addEventListener("click", (event) => {
-      console.log('Event click indicator', index);
 
+  indicators.forEach((button, index) => {
+    button.addEventListener("click", (event) => {
       indicators.forEach(button => {
         button.classList.remove('indicator-selected');
       });
 
-      slide(index);
-
       button.classList.add('indicator-selected');
+      slide(index);
+      currentSlide = index;
     });
   });
 }
 
 const slide = async (indexSlide) => {
-  const slidesImages = await apiDataImage();
-  const slideImage = document.querySelector('.slides > img');
+  const slidesImages = await DataSlideImages();
+
+  const slideImage = document.querySelector('.slide__img');
+  const slideSource = document.querySelector('.slide__source');
   slideImage.classList.add('slide-transition'); 
+
   slideImage.setAttribute('src', slidesImages[indexSlide].image);
+  slideSource.setAttribute('srcset', slidesImages[indexSlide].imageMobile);
   slideImage.setAttribute('alt', "photo de " + slidesImages[indexSlide].title);
 };
 
