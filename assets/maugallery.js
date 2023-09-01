@@ -20,13 +20,13 @@ const getProjects = (data) => {
     projet.setAttribute('data-project-id', element.id);
     
     const imgElement = document.createElement('img');
-    if (forMobile) {
-      imgElement.src = element.imageMobile; 
-    } else {
-      imgElement.src = element.image;
-    }
+    // if (forMobile) {
+    //   imgElement.src = element.imageMobile; 
+    // } else {
+    //   imgElement.src = element.image;
+    // }
 
-    // imgElement.src = element.image;
+    // // imgElement.src = element.image;
     imgElement.alt =`photo de ${element.title}`;
     imgElement.classList.add("projet-img");
     imgElement.addEventListener('click', () => {

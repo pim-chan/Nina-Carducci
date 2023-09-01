@@ -41,7 +41,6 @@ const indicatorCreation = () => {
 }
 
 const indicatorSelection = (indicatorIndex) => {
-
   const indicators = document.querySelectorAll('.indicator');
   Array.from(document.querySelectorAll('.indicator')).forEach((button,index) => {
       button.classList.remove('indicator-selected');
@@ -68,11 +67,11 @@ const slide = async (indexSlide) => {
 
   const slideImage = document.querySelector('.slide__img');
   const slideSource = document.querySelector('.slide__source');
-  slideImage.classList.add('slide-transition'); 
 
   slideImage.setAttribute('src', slidesImages[indexSlide].image);
   slideSource.setAttribute('srcset', slidesImages[indexSlide].imageMobile);
   slideImage.setAttribute('alt', "photo de " + slidesImages[indexSlide].title);
+
 };
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -82,9 +81,13 @@ document.addEventListener("DOMContentLoaded", () => {
       button.addEventListener("click", () => {
           const action = button.getAttribute("data-action");
           if (action === "prev") {
-              slide(-1);
+            currentSlide = currentSlide - 1;
+            if (currentSlide === -1) {currentSlide = nbSlides;}
+            slide(currentSlide);
           } else if (action === "next") {
-              slide(1);
+            currentSlide = currentSlide + 1;
+            if (currentSlide > nbSlides) {currentSlide = 0;}
+            slide(currentSlide);
           }
       });
   }); 
