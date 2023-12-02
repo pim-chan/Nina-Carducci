@@ -11,8 +11,6 @@ const getProjects = (data) => {
   const dataGalleryImages = data.gallery;
   const gallery = document.querySelector(".gallery");
   gallery.innerHTML = "";
-
-  const forMobile = window.innerWidth <= 767;
   
   dataGalleryImages.forEach((element) => {
     const projet = document.createElement('picture');
@@ -20,13 +18,7 @@ const getProjects = (data) => {
     projet.setAttribute('data-project-id', element.id);
     
     const imgElement = document.createElement('img');
-    // if (forMobile) {
-    //   imgElement.src = element.imageMobile; 
-    // } else {
-    //   imgElement.src = element.image;
-    // }
-
-    // // imgElement.src = element.image;
+    imgElement.src = element.image;
     imgElement.alt =`photo de ${element.title}`;
     imgElement.classList.add("projet-img");
     imgElement.addEventListener('click', () => {
