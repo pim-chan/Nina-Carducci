@@ -29,6 +29,7 @@ const indicatorCreation = () => {
         navigatorElement.classList.add('indicator')
         navigatorElement.dataset.slideIndex = index;
         navigatorElement.textContent = `Slide ${index + 1}`;
+        
         if(index === 0){
           navigatorElement.classList.add('indicator-selected');
         }

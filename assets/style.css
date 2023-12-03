@@ -149,6 +149,7 @@ header ul {
 	margin-left: 3px;
 	text-indent: -999px;
 	cursor: pointer;
+	color: transparent;
 	background-color: #fff;
 	background-clip: padding-box;
 	border: 0;
@@ -276,7 +277,7 @@ header ul {
   }
   .nav-link-active {
 	color: #fff;
-	background-color: #BEB45A;
+	background-color: #7f7837;
 }
   .nav-link.disabled {
 	color: #6c757d;
