@@ -33,7 +33,7 @@
             "id": "5",
             "title": "Jason Goodman",
             "image": "./assets/images/gallery/entreprise/jason-goodman.webp",
-            "imageMobile": "./assets/images/gallery/portraits/van-prattenburg(small).webp",  
+            "imageMobile": "./assets/images/gallery/portraits/jason-goodman(small).webp",  
             "category" : "Entreprise"
         },
         {
@@ -66,9 +66,9 @@
         },
         {
             "id": "10",
-            "title": "Van Prattenburg",
-            "image": "./assets/images/gallery/portraits/van-prattenburg.webp",
-            "imageMobile": "./assets/images/gallery/portraits/van-prattenburg(small).webp", 
+            "title": "Nino Van Prattenburg",
+            "image": "./assets/images/gallery/portraits/nino-van-prattenburg.webp",
+            "imageMobile": "./assets/images/gallery/portraits/nino-van-prattenburg(small).webp", 
             "category" : "Portrait"
         },
         {
