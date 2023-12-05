@@ -19,7 +19,7 @@ const getProjects = (data) => {
     
     const imgElement = document.createElement('img');
     imgElement.src = element.image;
-    imgElement.alt =`photo de ${element.title}`;
+    imgElement.alt = element.textAlt;
     imgElement.classList.add("projet-img");
     imgElement.addEventListener('click', () => {
       openLightBox(element.image);

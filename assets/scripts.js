@@ -71,7 +71,7 @@ const slide = async (indexSlide) => {
 
   slideImage.setAttribute('src', slidesImages[indexSlide].image);
   slideSource.setAttribute('srcset', slidesImages[indexSlide].imageMobile);
-  slideImage.setAttribute('alt', "photo de " + slidesImages[indexSlide].title);
+  slideImage.setAttribute('alt', slidesImages[indexSlide].textAlt);
 
 };
 
