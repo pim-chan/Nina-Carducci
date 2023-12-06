@@ -7,6 +7,7 @@ const galleryImagesData = () => {
     });
 }
 
+//Afficher les projets dans la galerie + lightbox
 const getProjects = (data) => {
   const dataGalleryImages = data.gallery;
   const gallery = document.querySelector(".gallery");
@@ -62,6 +63,7 @@ const createFilterButtons = (data) => {
   });
 }
 
+//Selectionner une catégorie
 const categorySelection = (selectedCategory) => {
   Array.from(document.querySelectorAll('.nav-link')).forEach((element) => {
     element.classList.remove('nav-link-active');
@@ -86,6 +88,7 @@ const openLightBox = (imageUrl) => {
 
 let currentImageIndex = 0;
 
+// Précédent et suivant dans la lightbox 
 const navigateLightbox = (direction) => {
     fetch('./assets/images.json')
       .then(res => res.json())
